@@ -1,5 +1,5 @@
 #!/bin/sh
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$WORKSPACE"
 log=err.dat."$(date +%F-%H%M)"
 echo "El valor de DIR es "$DIR""
 echo "El valor de la variable 1 es "$1""
