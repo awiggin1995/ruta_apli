@@ -6,15 +6,15 @@ echo "El valor de la variable 1 es "$1""
 echo "El valor de la variable 2 es "$2""
 echo "El valor de la variable log es "$log""
 echo "Creamos directorio lanzando comando mkdir -p $DIR/tmp"
-mkdir -p '$DIR'/tmp
-echo "Creamos fichero lanzando touch '$DIR'/tmp/'$log'"
-touch '$DIR'/tmp/'$log'
-exec 2>'$DIR'/tmp/'$log'
+mkdir -p ${DIR}/tmp
+echo "Creamos fichero lanzando touch ${DIR}/tmp/${log}"
+touch ${DIR}/tmp/${log}
+exec 2>${DIR}/tmp/${log}
 echo "Hello World"
-err="$(cat '$DIR'/tmp/'$log' | wc -l)"
+err="$(cat ${DIR}/tmp/${log} | wc -l)"
 if [[ "$err" == 0 ]]
 then 
-	if [[ "$2" == "true" ]]
+	if [[ "${2}" == "true" ]]
 	then
 		echo "El valor de la segunda variable es "$2"."
 		echo "Deployamos"
