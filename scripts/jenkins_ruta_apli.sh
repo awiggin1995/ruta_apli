@@ -1,7 +1,9 @@
 #!/bin/sh
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-log=err.dat.$(date +%F-%H%M)
+log=err.dat."$(date +%F-%H%M)"
 echo "El valor de DIR es "$DIR""
+echo "El valor de la variable 1 es "$1""
+echo "El valor de la variable 2 es "$2""
 mkdir -p "$DIR"/"$1"/tmp
 touch "$DIR"/"$1"/tmp/"$log"
 exec 2>"$DIR"/"$1"/tmp/"$log"
