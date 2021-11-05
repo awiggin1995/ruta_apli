@@ -5,7 +5,6 @@ echo "El valor de DIR es "$DIR""
 echo "El valor de la variable 1 es "$1""
 echo "El valor de la variable 2 es "$2""
 echo "El valor de la variable log es "$log""
-cd ${DIR}; mkdir tmp; touch ${log}
 exec 2>"${DIR}"/tmp/"${log}"
 echo "Hello World"
 err="$(cat "${DIR}"/tmp/"${log}" | wc -l)"
