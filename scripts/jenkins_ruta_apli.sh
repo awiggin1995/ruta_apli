@@ -1,6 +1,6 @@
 #!/bin/sh
 DIR="$WORKSPACE"
-log=$( $(DIR)/tmp/err.dat.$( date +%F-%H%M))
+log=$(DIR)/tmp/err.dat.$( date +%F-%H%M)
 echo "El valor de DIR es "$DIR""
 echo "El valor de la variable 1 es "$1""
 echo "El valor de la variable 2 es "$2""
