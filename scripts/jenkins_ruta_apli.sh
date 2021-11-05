@@ -3,7 +3,14 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 mkdir -p $DIR/$1/tmp
 exec 2>$DIR/$1/tmp/err.dat.$(date +%F-%H%M)
-. $DIR/$1/ruta_apli_$1.sh
+
+echo "Hello World"
+
+
+
+
+
+
 
 err=$(cat $DIR/$1/tmp/err.dat.$(date +%F-%H%M)|wc -l)
 
