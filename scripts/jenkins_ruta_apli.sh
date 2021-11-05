@@ -7,9 +7,11 @@ echo "El valor de la variable 2 es "$2""
 echo "El valor de la variable log es "$log""
 touch $log
 echo "Hello World"
-if [ -s ! "$log" ]
+if [ -s "$log" ]
 then 
-	exit 0
-else 
+	echo "Hay errores, finalizamos con exit 1"
 	exit 1
+else 
+	echo "No hay errores, finalizamos con exit 0"
+	exit 0
 fi
