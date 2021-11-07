@@ -3,8 +3,8 @@ export WORKSPACE=/home/awiggin/GitHub/ruta_apli/
 export TMP=/home/awiggin/GitHub/ruta_apli/tmp/
 export DIR=$WORKSPACE
 export date=$(date +%F-%H%M)
-export log=""${TMP}"'err.dat.'"${date}""
-touch "${log}"
+export log=""${TMP}"err.dat."${date}""
+touch "$log"
 echo "El valor de DIR es $DIR"
 echo "El valor de la variable 1 es $1"
 echo "El valor de la variable 2 es $2"
