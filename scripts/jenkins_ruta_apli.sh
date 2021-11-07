@@ -3,7 +3,7 @@ export WORKSPACE=/home/awiggin/GitHub/ruta_apli/
 export TMP=/home/awiggin/GitHub/ruta_apli/tmp/
 export DIR=$WORKSPACE
 export date=$(date +%F-%H%M)
-export log=${TMP}err.dat.${date}
+export log="${TMP}err.dat.${date}"
 touch "${log}"
 echo "El valor de DIR es $DIR"
 echo "El valor de la variable 1 es $1"
@@ -17,3 +17,4 @@ then
 else 
 	echo "No hay errores, finalizamos con exit 0"
 	exit 0
+fi
